@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/H3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kategori" />
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_list_category"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:constraint_referenced_ids="ll_category_rice,ll_category_noodle,ll_category_snack,ll_category_drink"
+        app:flow_horizontalStyle="spread_inside"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_category" />
+
+    <LinearLayout
+        android:id="@+id/ll_category_rice"
+        android:layout_width="64dp"
+        android:layout_height="92dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_category_rice"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_category_rice"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/Subhead2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nasi"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_category_noodle"
+        android:layout_width="64dp"
+        android:layout_height="92dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_category_noodle"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_category_noodle"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/Subhead2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mie"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_category_snack"
+        android:layout_width="64dp"
+        android:layout_height="92dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_category_snack"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_category_snack"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/Subhead2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Snack"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_category_drink"
+        android:layout_width="64dp"
+        android:layout_height="92dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_category_drink"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_category_drink"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/Subhead2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Minuman"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

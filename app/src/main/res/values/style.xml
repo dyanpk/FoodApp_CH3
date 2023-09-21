@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Subhead2" parent="android:TextAppearance">
+        <item name="android:textColor">@color/licorice</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="Subhead3" parent="android:TextAppearance">
+        <item name="android:textColor">@color/licorice</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="H1" parent="android:TextAppearance">
+        <item name="android:textColor">@color/licorice</item>
+        <item name="android:textSize">22sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+    <style name="H2" parent="android:TextAppearance">
+        <item name="android:textColor">@color/licorice</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+    <style name="H3" parent="android:TextAppearance">
+        <item name="android:textColor">@color/licorice</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+    <style name="H4" parent="android:TextAppearance">
+        <item name="android:textColor">@color/licorice</item>
+        <item name="android:textSize">16sp</item>
+        st
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+    <style name="H6" parent="android:TextAppearance">
+        <item name="android:textColor">@color/licorice</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+
+</resources>
