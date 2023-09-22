@@ -22,7 +22,7 @@
             style="@style/H1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hai, Binarian" />
+            android:text="@string/tv_header_name" />
 
         <TextView
             android:id="@+id/tv_header_greetings"
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.5"
-            android:text="Mau Makann Apa Hari Ini?" />
+            android:text="@string/tv_header_greeting" />
     </LinearLayout>
 
     <LinearLayout

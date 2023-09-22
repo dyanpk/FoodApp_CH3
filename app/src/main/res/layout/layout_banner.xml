@@ -69,7 +69,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:text="Diskon 30%"
+                        android:text="@string/tv_discount_30"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -81,7 +81,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:text="Pesan makanan melalui aplikasi dan dapatkan diskonmu!"
+                        android:text="@string/tv_discount_des"
                         android:textColor="@color/white"
 
                         app:layout_constraintBottom_toBottomOf="parent"

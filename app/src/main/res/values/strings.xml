@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">food_delivery</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category_rice">Nasi</string>
+    <string name="category_noodle">Mie</string>
+    <string name="tv_category">Kategori</string>
+    <string name="tv_header_name">Hai, Binarian</string>
+    <string name="tv_header_greeting">Mau Makan Apa Hari Ini?</string>
+    <string name="tv_discount_30">Diskon 30%</string>
+    <string name="tv_discount_des">Pesan makanan melalui aplikasi dan dapatkan diskonmu!</string>
+    <string name="tv_category_snack">Snack</string>
+    <string name="tv_category_drink">Minuman</string>
+    <string name="tv_list_of_food">List Menu Makanan</string>
+    <string name="tv_item_quantity">0</string>
+    <string name="tv_price">Tambah ke Keranjang - Rp 0</string>
+    <string name="tv_menu_name_detail">Ayam Goreng</string>
+    <string name="tv_menu_price_detail">Rp 40.000</string>
+    <string name="tv_location_detail">Lokasi</string>
 </resources>

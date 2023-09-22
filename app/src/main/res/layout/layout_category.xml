@@ -6,24 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/ll_category"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/tv_category"
             style="@style/H3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kategori" />
-
-
-    </LinearLayout>
+            android:text="@string/tv_category"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow_list_category"
@@ -36,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll_category" />
+        app:layout_constraintTop_toBottomOf="@id/tv_category" />
 
     <LinearLayout
         android:id="@+id/ll_category_rice"
@@ -57,7 +50,7 @@
             style="@style/Subhead2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nasi"
+            android:text="@string/category_rice"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -80,7 +73,7 @@
             style="@style/Subhead2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mie"
+            android:text="@string/category_noodle"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -103,7 +96,7 @@
             style="@style/Subhead2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Snack"
+            android:text="@string/tv_category_snack"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -126,7 +119,7 @@
             style="@style/Subhead2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Minuman"
+            android:text="@string/tv_category_drink"
             android:textAlignment="center" />
     </LinearLayout>
 
