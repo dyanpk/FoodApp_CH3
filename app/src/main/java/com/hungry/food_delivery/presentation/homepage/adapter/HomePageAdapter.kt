@@ -63,7 +63,4 @@ class HomePageAdapter(
         dataDiffer.submitList(data)
     }
 
-    fun refreshList() {
-        notifyItemRangeChanged(0,dataDiffer.currentList.size)
-    }
 }

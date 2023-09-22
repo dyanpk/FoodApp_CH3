@@ -9,5 +9,8 @@ data class Food(
     val id: String = UUID.randomUUID().toString(),
     val nameOfFood: String,
     val imgUrlFood: String,
-    val priceOfFood: Double
+    val priceOfFood: Double,
+    val descOfFood: String,
+    val locationOfFood : String,
+    val locationUrlFood : String
 ) : Parcelable

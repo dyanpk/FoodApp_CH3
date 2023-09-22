@@ -21,17 +21,13 @@ class HomePageFragment : Fragment() {
 
     private lateinit var binding: FragmentHomePageBinding
 
-    private val dataSource: FoodDataSource by lazy {
-        FoodDataSourceImpl()
-    }
+    private val dataSource: FoodDataSource by lazy { FoodDataSourceImpl() }
 
-    private val linearLayoutManager: LinearLayoutManager by lazy {
-        LinearLayoutManager(requireContext())
-    }
+    private val gridLayoutManager: GridLayoutManager by lazy { GridLayoutManager(requireContext(), 2) }
 
-    private val gridLayoutManager: GridLayoutManager by lazy {
-        GridLayoutManager(requireContext(), 2)
-    }
+    private val linearLayoutManager: LinearLayoutManager by lazy { LinearLayoutManager(requireContext())}
+
+    private var isLinearMode = true
 
     private val adapter: HomePageAdapter by lazy {
         HomePageAdapter(AdapterLayoutMode.LINEAR) { food: Food ->
@@ -39,7 +35,11 @@ class HomePageFragment : Fragment() {
         }
     }
 
-    private var isLinearMode = true
+    private fun navigateToDetail(food: Food) {
+        findNavController().navigate(
+            HomePageFragmentDirections.actionHomePageFragmentToFoodDetailFragment(food)
+        )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -56,19 +56,26 @@ class HomePageFragment : Fragment() {
         setupUpdateIcon()
     }
 
-    private fun setupUpdateIcon() {
-        updateIcon()
-
-        binding.inclFoodSelection.ivButton.setOnClickListener {
-            isLinearMode = !isLinearMode
-            updateIcon()
-            if (isLinearMode) {
-                switchToListMode()
-            } else {
-                switchToGridMode()
-
-            }
+    private fun setupList() {
+        val span = if(adapter.adapterLayoutMode == AdapterLayoutMode.LINEAR) 1 else 2
+        binding.inclFoodSelection.rvFood.apply {
+            layoutManager = GridLayoutManager(requireContext(),span)
+            adapter = this@HomePageFragment.adapter
         }
+        adapter.submitData(dataSource.getFoods()
+        )
+    }
+
+    private fun setupUpdateIcon() {
+        binding.inclFoodSelection.ivButton.setOnClickListener {
+            switchLayoutMode()
+            updateIcon()
+        }
+    }
+
+    private fun switchLayoutMode() {
+        isLinearMode = !isLinearMode
+        setLayoutManagerAndMode(if (isLinearMode) AdapterLayoutMode.LINEAR else AdapterLayoutMode.GRID)
     }
 
     private fun updateIcon() {
@@ -76,25 +83,13 @@ class HomePageFragment : Fragment() {
         binding.inclFoodSelection.ivButton.setImageResource(iconResource)
     }
 
-    private fun switchToGridMode() {
-        adapter.adapterLayoutMode = AdapterLayoutMode.GRID
-        binding.inclFoodSelection.rvFood.layoutManager = gridLayoutManager
+
+    private fun setLayoutManagerAndMode(mode: AdapterLayoutMode) {
+        val layoutManager = if (mode == AdapterLayoutMode.LINEAR) linearLayoutManager else gridLayoutManager
+        binding.inclFoodSelection.rvFood.layoutManager = layoutManager
+        adapter.adapterLayoutMode = mode
         adapter.submitData(dataSource.getFoods())
     }
 
-    private fun switchToListMode() {
-        adapter.adapterLayoutMode = AdapterLayoutMode.LINEAR
-        binding.inclFoodSelection.rvFood.layoutManager = linearLayoutManager
-        adapter.submitData(dataSource.getFoods())
-    }
 
-    private fun setupList() {
-        binding.inclFoodSelection.rvFood.layoutManager = linearLayoutManager
-        binding.inclFoodSelection.rvFood.adapter = adapter
-        adapter.submitData(dataSource.getFoods())
-    }
-
-    private fun navigateToDetail(food: Food) {
-
-    }
 }

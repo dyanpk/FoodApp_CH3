@@ -31,7 +31,7 @@
             style="@style/H6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ayam Goreng"
+            tools:text="@tools:sample/first_names"
             android:textAlignment="center" />
 
         <TextView
@@ -39,7 +39,7 @@
             style="@style/Subhead3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Rp 40.000"
+            tools:text="@tools:sample/us_zipcodes"
             android:textAlignment="center" />
     </LinearLayout>
 

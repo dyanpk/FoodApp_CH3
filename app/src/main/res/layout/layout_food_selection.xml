@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="List Menu Makanan" />
+            android:text="@string/tv_list_of_food" />
 
         <ImageView
             android:id="@+id/iv_button"
@@ -30,8 +30,6 @@
             android:layout_height="20dp"
             android:layout_weight="0"
             android:src="@drawable/ic_list"
-            android:clickable="true"
-            android:onClick="toggleView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toRightOf="@id/tv_menu_list"
             tools:ignore="ContentDescription" />
